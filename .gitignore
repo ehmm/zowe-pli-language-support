@@ -12,6 +12,7 @@ out/
 **/*.DS_Store
 scripts/*
 !scripts/*.mts
+!scripts/test-cli-samples.sh
 coverage/
 !img/*
 **/pli.merged.json

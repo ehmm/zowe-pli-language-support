@@ -67,7 +67,12 @@ async function main() {
     if (result.diagnostics.length > 0) {
       console.error("Diagnostics:");
       for (const diag of result.diagnostics) {
-        console.error(`${diag.message} at line ${diag.range.start.line + 1}`);
+        if (diag.range) {
+          const pos = document.positionAt(diag.range.start);
+          console.error(`${diag.message} at line ${pos.line + 1}`);
+        } else {
+          console.error(`${diag.message}`);
+        }
       }
     }
 

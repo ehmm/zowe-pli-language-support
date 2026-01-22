@@ -36,7 +36,8 @@
     }
   },
   "scripts": {
-    "clean": "shx rm -fr *.tsbuildinfo out"
+    "clean": "shx rm -fr *.tsbuildinfo out",
+    "build:cli": "esbuild src/cli/index.ts --bundle --platform=node --outfile=out/cli/index.js --format=esm --external:vscode --packages=external"
   },
   "dependencies": {
     "@chevrotain/regexp-to-ast": "^11.0.3",
@@ -53,6 +54,7 @@
     "vscode-uri": "^3.1.0"
   },
   "devDependencies": {
-    "@types/lodash-es": "^4.17.12"
+    "@types/lodash-es": "^4.17.12",
+    "esbuild": "~0.25.10"
   }
 }
