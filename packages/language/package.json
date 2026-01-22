@@ -22,6 +22,9 @@
       "default": "./out/workspace/builtins.js"
     }
   },
+  "bin": {
+    "pl1-preprocessor": "./out/cli/index.js"
+  },
   "typesVersions": {
     "*": {
       ".": [
